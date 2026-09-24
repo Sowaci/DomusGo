@@ -3,10 +3,11 @@ import { upload } from '../config/multer';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
+import { authMiddleware } from '../middlewares/auth.middleware';
 
 const router = Router();
 
-router.post('/', upload.single('image'), async (req, res) => {
+router.post('/', authMiddleware, upload.single('image'), async (req, res) => {
   const { propertyId } = req.body;
   const file = req.file;
 
