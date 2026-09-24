@@ -5,8 +5,8 @@ export default function Navbar() {
         <span className="text-2xl font-bold text-terracota">DomusGo</span>
         <div className="flex gap-6 text-charcoal text-sm font-medium">
           <a href="/" className="hover:text-terracota transition-colors">Inicio</a>
-          <a href="#" className="hover:text-terracota transition-colors">Publicar inmueble</a>
-          <a href="#" className="hover:text-terracota transition-colors">Iniciar sesión</a>
+          <a href="/publish" className="hover:text-terracota transition-colors">Publicar inmueble</a>
+          <a href="/login" className="hover:text-terracota transition-colors">Iniciar sesión</a>
         </div>
       </div>
     </nav>
